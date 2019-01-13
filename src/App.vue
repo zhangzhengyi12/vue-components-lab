@@ -1,24 +1,34 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <radio-group v-model="radioTest">
+      <radio-item label="aaa"/>
+      <radio-item label="bbb"/>
+      <radio-item label="ccc" disabled/>
+    </radio-group>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import RadioGroup from "./components/radio-group";
+import RadioItem from "./components/radio-item";
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    HelloWorld
+    RadioGroup,
+    RadioItem
+  },
+  data() {
+    window.a = this;
+    return {
+      radioTest: "aaa"
+    };
   }
-}
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
