@@ -1,29 +1,9 @@
 # vue-com-radio
 
-## Project setup
+```html
+<radio-group v-model="radioTest">
+      <radio-item label="aaa"/>
+      <radio-item label="bbb"/>
+      <radio-item label="ccc" disabled/>
+</radio-group>
 ```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
-
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
